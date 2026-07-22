@@ -4,7 +4,7 @@ A lightweight, self-contained Flask web application that converts PNG images int
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ```bash
 # 1. Install required packages
@@ -18,7 +18,7 @@ Your default web browser will automatically open to **http://localhost:5000**. I
 
 ---
 
-## ✨ Features
+## Features
 
 - **Drag & Drop (Single or Batch)**
   - Drag and drop single PNG files or entire folders at once.
