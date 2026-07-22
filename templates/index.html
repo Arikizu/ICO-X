@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cast — PNG to ICO</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' x='-0.2em' font-size='100'>🔅</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <main class="page">
+
+    <header class="masthead">
+	<h1>🔅</h1>
+  
+      <div class="masthead-text">
+        <h1>ICO-X</h1>
+        <p>ICON Converter - Easy and fast way to make icons</p>
+      </div>
+    </header>
+
+    <section class="card">
+
+      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload one or more PNG images">
+        <input type="file" id="fileInput" accept=".png,image/png" multiple hidden>
+
+        <div class="dropzone-empty" id="dropzoneEmpty">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M18 5v18M18 5l-7 7M18 5l7 7" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 26v3a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2v-3" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p><strong>Drag & Drop images or click to select</p>
+          <span class="hint">You can select only PNG files</span>
+        </div>
+
+        <div class="dropzone-filled" id="dropzoneFilled" hidden>
+        </div>
+      </div>
+
+      <ul class="queue" id="queue" hidden></ul>
+
+
+      <div class="sizes-block">
+        <div class="sizes-heading">
+          <h2>Sizes to cast</h2>
+          <button type="button" id="toggleAll" class="text-btn">Deselect all</button>
+        </div>
+
+        <div class="ladder" id="ladder">
+          {% for s in sizes %}
+          <label class="mold" data-size="{{ s }}">
+            <input type="checkbox" value="{{ s }}" checked>
+            <span class="mold-label">{{ s }}</span>
+          </label>
+          {% endfor %}
+        </div>
+
+
+	  <div>
+      <div class="aa-block">
+        <div class="sizes-heading">
+          <h2>Antialiasing</h2>
+        </div>
+        <div class="aa-options" id="aaOptions" role="radiogroup" aria-label="Antialiasing preset">
+          <button type="button" class="aa-pill is-active" data-aa="crisp" role="radio" aria-checked="true">
+            <span class="aa-dot aa-dot-crisp"></span>OFF
+          </button>
+          <button type="button" class="aa-pill" data-aa="standard" role="radio" aria-checked="false">
+            <span class="aa-dot aa-dot-standard"></span>Standard - x1
+          </button>
+          <button type="button" class="aa-pill" data-aa="soft" role="radio" aria-checked="false">
+            <span class="aa-dot aa-dot-soft"></span>Soft - x2
+          </button>
+          <button type="button" class="aa-pill" data-aa="extra" role="radio" aria-checked="false">
+            <span class="aa-dot aa-dot-extra"></span>Extra Soft - x3
+          </button>
+
+
+
+      <button type="button" id="convertBtn" class="cast-btn" disabled>
+        <span class="btn-label">Convert</span>
+        <span class="btn-spinner" hidden></span>
+      </button>
+
+     
+	  
+    </section>
+
+<p id="statusMsg" class="status" role="status"></p>
+
+    <footer class="foot">
+      <span>made by arikizu</span>
+    </footer>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
