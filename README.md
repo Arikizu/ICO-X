@@ -11,7 +11,7 @@ A lightweight, self-contained Flask web application that converts PNG images int
 pip install flask pillow
 
 # 2. Run the application
-python3 app.py
+python app.py
 ```
 
 Your default web browser will automatically open to **http://localhost:5000**. If running on a headless machine or remote server, navigate to that URL manually.
