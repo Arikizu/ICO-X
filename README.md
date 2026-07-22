@@ -38,7 +38,7 @@ Your default web browser will automatically open to **http://localhost:5000**. I
 
 ---
 
-## 📌 Notes
+## Notes
 
 - **Source Image Quality:** For optimal results across all icon sizes, use square, high-resolution source PNGs (512×512px or larger).
 - **Upload Limits:** Max file size is capped at **50 MB per file** and up to **100 files per batch**.
