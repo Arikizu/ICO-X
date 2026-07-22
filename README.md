@@ -23,12 +23,11 @@ Your default web browser will automatically open to **http://localhost:5000**. I
 - **Drag & Drop (Single or Batch)**
   - Drag and drop single PNG files or entire folders at once.
   - Interactive preview queue with thumbnails, file names, and individual remove controls.
-  - Smart exports: single files download directly as `.ico`; multi-file batches are packed into a single `.zip` archive.
+  - Flexible exports: single files download directly as `.ico`; multi-file batches are packed into a single `.zip` archive.
   - Robust batch processing skips invalid files gracefully and reports skipped items without breaking the conversion flow.
 
-- **Customizable Multi-Resolution Sizes**
-  - Toggle individual resolutions: `16px`, `24px`, `32px`, `48px`, `64px`, `96px`, `128px`, and `256px`.
-  - Visual scale previews with individual toggle controls, plus one-click **Select All** / **Deselect All** helpers.
+- **Customizable Resolution Sizes**
+  - Selectable resolutions: `16px`, `24px`, `32px`, `48px`, `64px`, `96px`, `128px`, and `256px`.
 
 - **Antialiasing Presets**
   - **OFF** — Crisp, untouched downscaling without antialiasing.
