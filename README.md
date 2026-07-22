@@ -1,4 +1,4 @@
-# ICO-X — PNG to ICO Converter
+# ICO-X - PNG to ICO Converter
 
 A lightweight, self-contained Flask web application that converts PNG images into multi-resolution Windows `.ico` files. Convert single images or batch process entire folders—all processed entirely in-memory with zero server-side disk writes.
 
