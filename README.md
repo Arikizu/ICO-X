@@ -1,4 +1,4 @@
-# ICO-X - PNG to ICO Converter
+# ICO-X — PNG to ICO Converter
 
 A lightweight, self-contained Flask web application that converts PNG images into multi-resolution Windows `.ico` files. Convert single images or batch process entire folders—all processed entirely in-memory with zero server-side disk writes.
 
@@ -40,5 +40,5 @@ Your default web browser will automatically open to **http://localhost:5000**. I
 ## Notes
 
 - **Source Image Quality:** For optimal results across all icon sizes, use square, high-resolution source PNGs (512×512px or larger).
-- **Upload Limits:** Max file size is capped at **50 MB per file** and up to **100 files per batch**.
+- **Upload Limits:** Max upload size is capped at **50 MB per file** and up to **100 files per batch**.
 - **Production Deployment:** This app runs on Flask's built-in development server by default. For production environments, deploy behind a production WSGI server (such as *Gunicorn* or *Waitress*) and disable dev-convenience features like auto-browser launching.
